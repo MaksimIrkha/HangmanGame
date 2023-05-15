@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Random;
 
 public class Dictionary {
-    private static final String DEFAULT_FILENAME = "C:\\Users\\Admin\\IdeaProjects\\-HangmanGame\\HangmanGame\\src\\main\\resources\\Dictionary.txt";
+    private static final String DEFAULT_FILENAME = "recources/Dictionary.txt";
 
     private List<String> wordsList;
     private String[] words;
