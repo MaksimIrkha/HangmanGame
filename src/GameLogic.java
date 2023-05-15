@@ -72,7 +72,7 @@ public class GameLogic {
     public int getAttemptsLeft() {
         return attemptsLeft;
     }
-    private void resetGame() {
+    public void resetGame() {
         attemptsLeft = MAX_ATTEMPTS;
         guessedLetters.clear();
         incorrectLetters.clear();
@@ -97,8 +97,6 @@ public class GameLogic {
                     view.displayWord(getHiddenWord(), guessedLetters);
                     gallowsInputOutput.printMessage("Поздравляем! Вы выиграли!");
                     System.out.println();
-                    resetGame();
-                    run();
                     return;
                 }
             } else {
@@ -108,8 +106,7 @@ public class GameLogic {
         view.showGallows();
         gallowsInputOutput.printMessage("Увы, вы проиграли. Загаданное слово было: " + getSecretWord());
         System.out.println();
-        resetGame();
-        run();
+
     }
     public void run() {
         GallowsInputOutput gi = new GallowsInputOutput();

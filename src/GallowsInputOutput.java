@@ -20,14 +20,14 @@ public class GallowsInputOutput {
         do {
             System.out.println("Введите букву: ");
             input = "";
-            try {
-                input = reader.readLine().toUpperCase();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            if (input.trim().length() != 1 || !Character.isLetter(input.trim().charAt(0))) {
-                System.out.println("Неверный ввод. Введите букву: ");
-            }
+        try {
+            input = reader.readLine().toUpperCase();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        if (input.trim().length() != 1 || !Character.isLetter(input.trim().charAt(0))) {
+            System.out.println("Неверный ввод. Введите букву: ");
+        }
         }
         while (input.trim().length() != 1 || !Character.isLetter(input.trim().charAt(0)));
 
